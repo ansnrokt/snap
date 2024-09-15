@@ -1,463 +1,413 @@
-{
-	"info": {
-		"_postman_id": "409a93c0-0076-4837-b90d-c5d806dcdbdf",
-		"name": "Channeling",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "36231441",
-		"_collection_link": "https://bina-digital.postman.co/workspace/Satellite-Product~4960180c-9698-46ce-91c7-0500767d3cd8/collection/33891910-409a93c0-0076-4837-b90d-c5d806dcdbdf?action=share&source=collection_link&creator=36231441"
-	},
-	"item": [
-		{
-			"name": "User",
-			"item": [
-				{
-					"name": "Get",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}/v1/user?nik=&email=&name=&phone_number=&core_id=",
-							"host": [
-								"{{local}}"
-							],
-							"path": [
-								"v1",
-								"user"
-							],
-							"query": [
-								{
-									"key": "nik",
-									"value": ""
-								},
-								{
-									"key": "email",
-									"value": ""
-								},
-								{
-									"key": "name",
-									"value": ""
-								},
-								{
-									"key": "phone_number",
-									"value": ""
-								},
-								{
-									"key": "core_id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Corporate",
-			"item": [
-				{
-					"name": "Create",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n    \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n    \"mobile_phone\": \"0064757433\",\r\n    \"source_of_income\":\"Dagang\",\r\n    \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\": \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\": \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}/v1/corporate",
-							"host": [
-								"{{local}}"
-							],
-							"path": [
-								"v1",
-								"corporate"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n    \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n    \"mobile_phone\": \"081282185856\",\r\n    \"source_of_income\":\"Dagang\",\r\n    \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\": \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\": \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{local}}/v1/corporate",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:20:03 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "720"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-201\",\n    \"response_message\": \"CREATED\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"\"\n    },\n    \"data\": {\n        \"created_at\": \"2023-12-12T09:20:03.5027498+07:00\",\n        \"id\": \"b29f9e5f-462d-49cf-adca-173a1acfff3a\",\n        \"name\": \"john siregar\",\n        \"email\": \"test_1@gmail.com\",\n        \"core_id\": \"6519140860\",\n        \"client_role_key\": \"8a8e8e987c560e38017c5d844082016c\",\n        \"encoded_key\": \"8ae380b78c44ee71018c5bd418ab0631\",\n        \"state\": \"INACTIVE\",\n        \"npwp\": \"142532118412110\",\n        \"home_phone\": \"62 12322\",\n        \"mobile_phone\": \"081282185856\",\n        \"source_of_income\": \"Dagang\",\n        \"industry\": \"3100\",\n        \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\n        \"city\": \"Bandung\",\n        \"province\": \"Jawa Barat\",\n        \"country\": \"Indonesia\",\n        \"partner_id\": \"sgo-test\",\n        \"product_type_key\": \"8ae383c68c163e51018c32833f7903a8\"\n    }\n}"
-						},
-						{
-							"name": "FAILED npwp exist",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n    \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n    \"mobile_phone\": \"081282185856\",\r\n    \"source_of_income\":\"Dagang\",\r\n    \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\": \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\": \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{local}}/v1/corporate",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate"
-									]
-								}
-							},
-							"status": "Unprocessable Entity",
-							"code": 422,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:29:07 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "144"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-422\",\n    \"response_message\": \"UNPROCESSABLE ENTITY\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"Corporate already exist\"\n    },\n    \"data\": null\n}"
-						}
-					]
-				},
-				{
-					"name": "Get",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}/v1/corporate/:id",
-							"host": [
-								"{{local}}"
-							],
-							"path": [
-								"v1",
-								"corporate",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "b29f9e52-462d-49cf-adca-173a1acfff3a"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}/v1/corporate/:id",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "b29f9e5f-462d-49cf-adca-173a1acfff3a"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:30:38 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "719"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-200\",\n    \"response_message\": \"SUCCESS\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"\"\n    },\n    \"data\": {\n        \"created_at\": \"2023-12-12T09:20:03.502749+07:00\",\n        \"id\": \"b29f9e5f-462d-49cf-adca-173a1acfff3a\",\n        \"name\": \"john siregar\",\n        \"email\": \"test_1@gmail.com\",\n        \"core_id\": \"6519140860\",\n        \"client_role_key\": \"8a8e8e987c560e38017c5d844082016c\",\n        \"encoded_key\": \"8ae380b78c44ee71018c5bd418ab0631\",\n        \"state\": \"INACTIVE\",\n        \"npwp\": \"142532118412110\",\n        \"home_phone\": \"62 12322\",\n        \"mobile_phone\": \"081282185856\",\n        \"source_of_income\": \"Dagang\",\n        \"industry\": \"3100\",\n        \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\n        \"city\": \"Bandung\",\n        \"province\": \"Jawa Barat\",\n        \"country\": \"Indonesia\",\n        \"partner_id\": \"sgo-test\",\n        \"product_type_key\": \"8ae383c68c163e51018c32833f7903a8\"\n    }\n}"
-						},
-						{
-							"name": "FAILED not found",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}/v1/corporate/:id",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "b29f9e52-462d-49cf-adca-173a1acfff3a"
-										}
-									]
-								}
-							},
-							"status": "Not Found",
-							"code": 404,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:38:36 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "126"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-404\",\n    \"response_message\": \"Not Found\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"record not found\"\n    },\n    \"data\": null\n}"
-						}
-					]
-				},
-				{
-					"name": "GetByParam",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}/v1/corporate?npwp=&email=&encoded_key&name&core_id=",
-							"host": [
-								"{{local}}"
-							],
-							"path": [
-								"v1",
-								"corporate"
-							],
-							"query": [
-								{
-									"key": "npwp",
-									"value": ""
-								},
-								{
-									"key": "email",
-									"value": ""
-								},
-								{
-									"key": "encoded_key",
-									"value": null
-								},
-								{
-									"key": "name",
-									"value": null
-								},
-								{
-									"key": "core_id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Success",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}/v1/corporate?npwp=142532118412110",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate"
-									],
-									"query": [
-										{
-											"key": "npwp",
-											"value": "142532118412110"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:39:30 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "719"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-200\",\n    \"response_message\": \"SUCCESS\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"\"\n    },\n    \"data\": {\n        \"created_at\": \"2023-12-12T09:20:03.502749+07:00\",\n        \"id\": \"b29f9e5f-462d-49cf-adca-173a1acfff3a\",\n        \"name\": \"john siregar\",\n        \"email\": \"test_1@gmail.com\",\n        \"core_id\": \"6519140860\",\n        \"client_role_key\": \"8a8e8e987c560e38017c5d844082016c\",\n        \"encoded_key\": \"8ae380b78c44ee71018c5bd418ab0631\",\n        \"state\": \"INACTIVE\",\n        \"npwp\": \"142532118412110\",\n        \"home_phone\": \"62 12322\",\n        \"mobile_phone\": \"081282185856\",\n        \"source_of_income\": \"Dagang\",\n        \"industry\": \"3100\",\n        \"address\": \"BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519\",\n        \"city\": \"Bandung\",\n        \"province\": \"Jawa Barat\",\n        \"country\": \"Indonesia\",\n        \"partner_id\": \"sgo-test\",\n        \"product_type_key\": \"8ae383c68c163e51018c32833f7903a8\"\n    }\n}"
-						},
-						{
-							"name": "FAILED bad request",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}/v1/corporate?npwp=&email=&encoded_key&name&core_id=",
-									"host": [
-										"{{local}}"
-									],
-									"path": [
-										"v1",
-										"corporate"
-									],
-									"query": [
-										{
-											"key": "npwp",
-											"value": ""
-										},
-										{
-											"key": "email",
-											"value": ""
-										},
-										{
-											"key": "encoded_key",
-											"value": null
-										},
-										{
-											"key": "name",
-											"value": null
-										},
-										{
-											"key": "core_id",
-											"value": ""
-										}
-									]
-								}
-							},
-							"status": "Bad Request",
-							"code": 400,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 12 Dec 2023 02:43:41 GMT"
-								},
-								{
-									"key": "Content-Length",
-									"value": "158"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"response_code\": \"PCH-400\",\n    \"response_message\": \"FAILED\",\n    \"meta\": {\n        \"trace_id\": \"\",\n        \"debug_param\": \"npwp, name, email, core_id, encoded_key is required\"\n    },\n    \"data\": null\n}"
-						}
-					]
-				}
-			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "local",
-			"value": "localhost:8080"
-		},
-		{
-			"key": "dev",
-			"value": "https://dev-proc-api-channeling.bankina.id",
-			"type": "string"
-		}
-	]
-}
+---
+info:
+  _postman_id: 409a93c0-0076-4837-b90d-c5d806dcdbdf
+  name: Channeling
+  schema: https://schema.getpostman.com/json/collection/v2.1.0/collection.json
+  _exporter_id: '36231441'
+  _collection_link: https://bina-digital.postman.co/workspace/Satellite-Product~4960180c-9698-46ce-91c7-0500767d3cd8/collection/33891910-409a93c0-0076-4837-b90d-c5d806dcdbdf?action=share&source=collection_link&creator=36231441
+item:
+- name: User
+  item:
+  - name: Get
+    request:
+      method: GET
+      header: []
+      url:
+        raw: "{{local}}/v1/user?nik=&email=&name=&phone_number=&core_id="
+        host:
+        - "{{local}}"
+        path:
+        - v1
+        - user
+        query:
+        - key: nik
+          value: ''
+        - key: email
+          value: ''
+        - key: name
+          value: ''
+        - key: phone_number
+          value: ''
+        - key: core_id
+          value: ''
+    response: []
+- name: Corporate
+  item:
+  - name: Create
+    request:
+      method: POST
+      header: []
+      body:
+        mode: raw
+        raw: "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n
+          \   \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n
+          \   \"mobile_phone\": \"0064757433\",\r\n    \"source_of_income\":\"Dagang\",\r\n
+          \   \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101 BEDAHAN
+          SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\":
+          \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\":
+          \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n"
+        options:
+          raw:
+            language: json
+      url:
+        raw: "{{local}}/v1/corporate"
+        host:
+        - "{{local}}"
+        path:
+        - v1
+        - corporate
+    response:
+    - name: Success
+      originalRequest:
+        method: POST
+        header: []
+        body:
+          mode: raw
+          raw: "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n
+            \   \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n
+            \   \"mobile_phone\": \"081282185856\",\r\n    \"source_of_income\":\"Dagang\",\r\n
+            \   \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101
+            BEDAHAN SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\":
+            \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\":
+            \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n"
+          options:
+            raw:
+              language: json
+        url:
+          raw: "{{local}}/v1/corporate"
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+      status: Created
+      code: 201
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:20:03 GMT
+      - key: Content-Length
+        value: '720'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-201",
+            "response_message": "CREATED",
+            "meta": {
+                "trace_id": "",
+                "debug_param": ""
+            },
+            "data": {
+                "created_at": "2023-12-12T09:20:03.5027498+07:00",
+                "id": "b29f9e5f-462d-49cf-adca-173a1acfff3a",
+                "name": "john siregar",
+                "email": "test_1@gmail.com",
+                "core_id": "6519140860",
+                "client_role_key": "8a8e8e987c560e38017c5d844082016c",
+                "encoded_key": "8ae380b78c44ee71018c5bd418ab0631",
+                "state": "INACTIVE",
+                "npwp": "142532118412110",
+                "home_phone": "62 12322",
+                "mobile_phone": "081282185856",
+                "source_of_income": "Dagang",
+                "industry": "3100",
+                "address": "BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519",
+                "city": "Bandung",
+                "province": "Jawa Barat",
+                "country": "Indonesia",
+                "partner_id": "sgo-test",
+                "product_type_key": "8ae383c68c163e51018c32833f7903a8"
+            }
+        }
+    - name: FAILED npwp exist
+      originalRequest:
+        method: POST
+        header: []
+        body:
+          mode: raw
+          raw: "{\r\n    \r\n    \"name\": \"john siregar\",\r\n    \"email\": \"test_1@gmail.com\",\r\n
+            \   \"npwp\": \"142532118412110\",\r\n    \"home_phone\":\"62 12322\",\r\n
+            \   \"mobile_phone\": \"081282185856\",\r\n    \"source_of_income\":\"Dagang\",\r\n
+            \   \"industry\": \"3100\",\r\n    \"address\": \"BUKIT RIVARIA J.101
+            BEDAHAN SAWANGAN  DEPOK  16519\",\r\n    \"city\": \"Bandung\",\r\n    \"province\":
+            \"Jawa Barat\",\r\n    \"country\": \"Indonesia\",\r\n    \"partner_id\":
+            \"sgo-test\",\r\n    \"product_type_key\":\"8ae383c68c163e51018c32833f7903a8\"\r\n}\r\n"
+          options:
+            raw:
+              language: json
+        url:
+          raw: "{{local}}/v1/corporate"
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+      status: Unprocessable Entity
+      code: 422
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:29:07 GMT
+      - key: Content-Length
+        value: '144'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-422",
+            "response_message": "UNPROCESSABLE ENTITY",
+            "meta": {
+                "trace_id": "",
+                "debug_param": "Corporate already exist"
+            },
+            "data": null
+        }
+  - name: Get
+    request:
+      method: GET
+      header: []
+      url:
+        raw: "{{local}}/v1/corporate/:id"
+        host:
+        - "{{local}}"
+        path:
+        - v1
+        - corporate
+        - ":id"
+        variable:
+        - key: id
+          value: b29f9e52-462d-49cf-adca-173a1acfff3a
+    response:
+    - name: Success
+      originalRequest:
+        method: GET
+        header: []
+        url:
+          raw: "{{local}}/v1/corporate/:id"
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+          - ":id"
+          variable:
+          - key: id
+            value: b29f9e5f-462d-49cf-adca-173a1acfff3a
+      status: OK
+      code: 200
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:30:38 GMT
+      - key: Content-Length
+        value: '719'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-200",
+            "response_message": "SUCCESS",
+            "meta": {
+                "trace_id": "",
+                "debug_param": ""
+            },
+            "data": {
+                "created_at": "2023-12-12T09:20:03.502749+07:00",
+                "id": "b29f9e5f-462d-49cf-adca-173a1acfff3a",
+                "name": "john siregar",
+                "email": "test_1@gmail.com",
+                "core_id": "6519140860",
+                "client_role_key": "8a8e8e987c560e38017c5d844082016c",
+                "encoded_key": "8ae380b78c44ee71018c5bd418ab0631",
+                "state": "INACTIVE",
+                "npwp": "142532118412110",
+                "home_phone": "62 12322",
+                "mobile_phone": "081282185856",
+                "source_of_income": "Dagang",
+                "industry": "3100",
+                "address": "BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519",
+                "city": "Bandung",
+                "province": "Jawa Barat",
+                "country": "Indonesia",
+                "partner_id": "sgo-test",
+                "product_type_key": "8ae383c68c163e51018c32833f7903a8"
+            }
+        }
+    - name: FAILED not found
+      originalRequest:
+        method: GET
+        header: []
+        url:
+          raw: "{{local}}/v1/corporate/:id"
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+          - ":id"
+          variable:
+          - key: id
+            value: b29f9e52-462d-49cf-adca-173a1acfff3a
+      status: Not Found
+      code: 404
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:38:36 GMT
+      - key: Content-Length
+        value: '126'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-404",
+            "response_message": "Not Found",
+            "meta": {
+                "trace_id": "",
+                "debug_param": "record not found"
+            },
+            "data": null
+        }
+  - name: GetByParam
+    request:
+      method: GET
+      header: []
+      url:
+        raw: "{{local}}/v1/corporate?npwp=&email=&encoded_key&name&core_id="
+        host:
+        - "{{local}}"
+        path:
+        - v1
+        - corporate
+        query:
+        - key: npwp
+          value: ''
+        - key: email
+          value: ''
+        - key: encoded_key
+          value: 
+        - key: name
+          value: 
+        - key: core_id
+          value: ''
+    response:
+    - name: Success
+      originalRequest:
+        method: GET
+        header: []
+        url:
+          raw: "{{local}}/v1/corporate?npwp=142532118412110"
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+          query:
+          - key: npwp
+            value: '142532118412110'
+      status: OK
+      code: 200
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:39:30 GMT
+      - key: Content-Length
+        value: '719'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-200",
+            "response_message": "SUCCESS",
+            "meta": {
+                "trace_id": "",
+                "debug_param": ""
+            },
+            "data": {
+                "created_at": "2023-12-12T09:20:03.502749+07:00",
+                "id": "b29f9e5f-462d-49cf-adca-173a1acfff3a",
+                "name": "john siregar",
+                "email": "test_1@gmail.com",
+                "core_id": "6519140860",
+                "client_role_key": "8a8e8e987c560e38017c5d844082016c",
+                "encoded_key": "8ae380b78c44ee71018c5bd418ab0631",
+                "state": "INACTIVE",
+                "npwp": "142532118412110",
+                "home_phone": "62 12322",
+                "mobile_phone": "081282185856",
+                "source_of_income": "Dagang",
+                "industry": "3100",
+                "address": "BUKIT RIVARIA J.101 BEDAHAN SAWANGAN  DEPOK  16519",
+                "city": "Bandung",
+                "province": "Jawa Barat",
+                "country": "Indonesia",
+                "partner_id": "sgo-test",
+                "product_type_key": "8ae383c68c163e51018c32833f7903a8"
+            }
+        }
+    - name: FAILED bad request
+      originalRequest:
+        method: GET
+        header: []
+        url:
+          raw: "{{local}}/v1/corporate?npwp=&email=&encoded_key&name&core_id="
+          host:
+          - "{{local}}"
+          path:
+          - v1
+          - corporate
+          query:
+          - key: npwp
+            value: ''
+          - key: email
+            value: ''
+          - key: encoded_key
+            value: 
+          - key: name
+            value: 
+          - key: core_id
+            value: ''
+      status: Bad Request
+      code: 400
+      _postman_previewlanguage: json
+      header:
+      - key: Content-Type
+        value: application/json; charset=utf-8
+      - key: Date
+        value: Tue, 12 Dec 2023 02:43:41 GMT
+      - key: Content-Length
+        value: '158'
+      cookie: []
+      body: |-
+        {
+            "response_code": "PCH-400",
+            "response_message": "FAILED",
+            "meta": {
+                "trace_id": "",
+                "debug_param": "npwp, name, email, core_id, encoded_key is required"
+            },
+            "data": null
+        }
+event:
+- listen: prerequest
+  script:
+    type: text/javascript
+    exec:
+    - ''
+- listen: test
+  script:
+    type: text/javascript
+    exec:
+    - ''
+variable:
+- key: local
+  value: localhost:8080
+- key: dev
+  value: https://dev-proc-api-channeling.bankina.id
+  type: string
