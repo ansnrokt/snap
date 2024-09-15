@@ -1,9 +1,6 @@
 openapi: 3.0.0
 info:
   title: Mortgage Portal
-  x-logo:
-    url: https://imgur.com/pa59Ssa
-  contact: {}
   version: '1.0'
 servers:
 - url: http://example.com/v1
@@ -26,7 +23,8 @@ paths:
       parameters:
       - name: trace-id
         in: header
-        description: ''
+        description: 
+          ![Logo](https://imgur.com/pa59Ssa)
         required: true
         style: simple
         schema:
