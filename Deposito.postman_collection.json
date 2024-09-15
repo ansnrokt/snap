@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "b20de5a0-8c41-4895-bef3-32503682d000",
+		"name": "Deposito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36231441",
+		"_collection_link": "https://bina-digital.postman.co/workspace/bina-mobile~4123f470-05b6-49d6-8bb8-56c4e2b07557/collection/33887415-b20de5a0-8c41-4895-bef3-32503682d000?action=share&source=collection_link&creator=36231441"
+	},
+	"item": [
+		{
+			"name": "Get Deposito Plan Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDaVVIY1VTQ1BkLXU4VG5FY0JFandWcWYtUUxMS2gxM2g3aXp1bnFDMmprIn0.eyJleHAiOjE3MDk2OTEzMjcsImlhdCI6MTcwOTUxODUyNywianRpIjoiOWI0ZjkxYjMtMGU4Yy00OWE0LTk4MzQtN2U3NzA5Y2VlMWQwIiwiaXNzIjoiaHR0cHM6Ly9kZXYta2V5Y2xvYWsuYmFua2luYS5pZC9hdXRoL3JlYWxtcy9UZXN0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjMzMjNjZGVkLTUzODUtNDBmMi05MGRmLTk2MjFhMGE4ODIyNSIsInR5cCI6IkJlYXJlciIsImF6cCI6InRlc3QtbW9iaWxlIiwic2Vzc2lvbl9zdGF0ZSI6IjJjYWFhYTRmLWU2NDgtNGI5My1iMjVhLThhMWZlNjNkNDIzYyIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtdGVzdCIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJzaWQiOiIyY2FhYWE0Zi1lNjQ4LTRiOTMtYjI1YS04YTFmZTYzZDQyM2MiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsInByZWZlcnJlZF91c2VybmFtZSI6InJlZmNvZGU4IiwidXNlciI6eyJpZCI6OTY2NH19.ZHtF3NOYjKhjeiJRY-jht2LCjT0eIRp8w9_8m5IP2FHT39Xx_R644P4Q8dmJooWFTf79CNDa8Rdqfg_NZ9a2vdDF_ijXFGxUwDNtnE4mPwgDijQxIqnhb8ZyWNXXiyYXwRyD4XY1cU-F5XxBG34GXjVsh7Y_tZetSFseo-zA2SPa0qbb9xxsDkpXj2o8QceynepOIXR843wZ3Rm-3j4D96p7G8LXaZmRDzJ13Md-zkHHSj1psrFacpr9XYm_CEofcWUJ-nfYguWqtH1d1IC1GUhwbj4M4Y2dGpB0gxEp0RhwLnvlA68_tppx-nAzD5D0Ji7F1QdcKb7GlhKNpYuyvA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHANNEL-ID",
+						"value": "ID0019999",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nik\": \"123456789098765\",\r\n    \"nama_lgkp\": \"NANDO\",\r\n    \"jenis_klmin\": \"laki-laki\",\r\n    \"tmpt_lhr\": \"Jakarta\",\r\n    \"tgl_lhr\": \"11-05-1994\",\r\n    \"nama_lgkp_ibu\": \"Siti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_deposit_v1}}/deposito/plan",
+					"host": [
+						"{{url_deposit_v1}}"
+					],
+					"path": [
+						"deposito",
+						"plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inquiry Deposito Experience Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"if (pm.response.code == 200){\r",
+							"    pm.environment.set(\"user_id\", jsonData.data.user.user_id)\r",
+							"    pm.environment.set(\"reference_number_deposito\", jsonData.data.deposito.reference_number)\r",
+							"    pm.environment.set(\"deposit_product_id\", jsonData.data.deposito.plan.deposit_product.deposit_product_id)\r",
+							"    pm.environment.set(\"transfer_amount_deposito\", jsonData.data.transfer.amount)\r",
+							"    pm.environment.set(\"sender_account_id_deposito\", jsonData.data.transfer.sender.account_id)\r",
+							"    pm.environment.set(\"return_date\", jsonData.data.deposito.return_date)\r",
+							"    pm.environment.set(\"deposito_name\", jsonData.data.deposito.name)\r",
+							"};"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Trace-ID",
+						"value": "4324324343",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\": {\r\n        \"device_type\": \"Android\",\r\n        \"device_id\": \"{{device_id}}\",\r\n        \"longitude\": 1234,\r\n        \"latitude\": -12.123\r\n    },\r\n    \"user\": {\r\n        \"user_id\": 9664\r\n    },\r\n    \"deposito\": {\r\n        \"name\": \"Tabungan kecil\",\r\n        \"deposit_product_id\": 4,\r\n        \"plan_id\": 2,\r\n        \"type_id\": 1,\r\n        \"icon_id\": 2,\r\n        \"return_date\": \"27-10-2024\"\r\n    },\r\n    \"transfer\": {\r\n        \"amount\": 1000000,\r\n        \"sender\": {\r\n            \"account_id\": \"818892464698\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/deposito/inquiry",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"deposito",
+						"inquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Deposito Experience Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const timestamp = Math.floor(Date.now() / 1000)\r",
+							"const device_id = pm.environment.get(\"device_id\")\r",
+							"const public_key = pm.environment.get(\"public_key\")\r",
+							"const transfer_amount = pm.environment.get(\"transfer_amount_deposito\")\r",
+							"const sender_account_id = pm.environment.get(\"sender_account_id_deposito\")\r",
+							"const deposit_product_id = pm.environment.get(\"deposit_product_id\")\r",
+							"const pin = pm.environment.get(\"pin\")\r",
+							"const user_id = pm.environment.get(\"user_id\")\r",
+							"\r",
+							"pmlib_code = pm.environment.get('pmlib_code')\r",
+							"eval(pmlib_code)\r",
+							"\r",
+							"encryptPayload()\r",
+							"\r",
+							"function encryptPayload() {\r",
+							"    payload = `VALIDATEPINDEPOSITO|${pin}|${user_id}|${deposit_product_id}|${transfer_amount}|${sender_account_id}|${device_id}|${timestamp}`\r",
+							"    const publicKey = forge.pki.publicKeyFromPem(public_key);\r",
+							"    const encryptedText = forge.util.encode64(publicKey.encrypt(payload, 'RSAES-PKCS1-V1_5', {\r",
+							"        md: forge.md.sha256.create()\r",
+							"    }));\r",
+							"    pm.environment.set(\"credentials_value\", encryptedText)\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\": {\r\n        \"device_type\": \"Android\",\r\n        \"device_id\": \"{{device_id}}\",\r\n        \"longitude\": 1234,\r\n        \"latitude\": -12.123\r\n    },\r\n    \"pin\": {\r\n        \"format\": \"SHA256withRSA\",\r\n        \"value\": \"{{credentials_value}}\",\r\n        \"key_version\": {{key_version}}\r\n    },\r\n    \"user\": {\r\n        \"user_id\": {{user_id}}\r\n    },\r\n    \"deposito\": {\r\n        \"name\": \"Tabungan Umroh\",\r\n        \"reference_number\": \"{{reference_number_deposito}}\",\r\n        \"deposit_product_id\": 4,\r\n        \"plan_id\": 2,\r\n        \"type_id\": 1,\r\n        \"icon_id\": 2,\r\n        \"return_date\": \"{{return_date}}\",\r\n        \"terms_agreed\": true\r\n    },\r\n    \"transfer\": {\r\n        \"amount\": {{transfer_amount_deposito}},\r\n        \"sender\": {\r\n            \"account_id\": \"{{sender_account_id_deposito}}\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/deposito/confirm",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"deposito",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
