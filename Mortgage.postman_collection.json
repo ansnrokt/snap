@@ -23,8 +23,7 @@ paths:
       parameters:
       - name: trace-id
         in: header
-        description: 
-          ![Logo](https://imgur.com/pa59Ssa)
+        description: '![Logo](https://imgur.com/pa59Ssa)'
         required: true
         style: simple
         schema:
