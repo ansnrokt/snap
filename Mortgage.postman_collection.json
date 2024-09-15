@@ -19,7 +19,7 @@ paths:
     post:
       tags:
       - User
-      summary: Create Users
+      summary: Create Userss
       operationId: CreateUsers
       parameters:
       - name: trace-id
