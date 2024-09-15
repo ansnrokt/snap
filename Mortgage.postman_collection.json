@@ -3,7 +3,7 @@ info:
   title: Mortgage Portal
   version: '1.0'
   description: |
-    ![Logo](https://i.imgur.com/pa59Ssa.png)
+    ![Logo](https://imgur.com/a/XKeyA48)
 servers:
 - url: http://example.com/v1
   variables: {}
