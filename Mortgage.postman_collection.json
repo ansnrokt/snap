@@ -1,6 +1,8 @@
 openapi: 3.0.0
 info:
   title: Mortgage Portal
+  x-logo:
+    url: https://imgur.com/pa59Ssa
   contact: {}
   version: '1.0'
 servers:
@@ -19,7 +21,7 @@ paths:
     post:
       tags:
       - User
-      summary: Create Userss
+      summary: Create Users
       operationId: CreateUsers
       parameters:
       - name: trace-id
